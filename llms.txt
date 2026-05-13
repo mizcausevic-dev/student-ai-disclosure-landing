@@ -1,0 +1,35 @@
+# Student AI Disclosure
+
+> Student-side disclosure attached to submitted work.
+
+An open JSON spec for student-side disclosure attached to submitted artifacts: AI tools used (with back-refs to Agent Cards / Tutor Cards), 13-value role taxonomy, prompt evidence (full / hashed / omitted), artifact-hash binding, AUP reference, teacher acknowledgment. Disclosure is the lawful state — the spec punishes omission, not AI use.
+
+## Identity
+
+- **Subdomain**: [student.kineticgain.com](https://student.kineticgain.com/)
+- **Spec repo**: [github.com/mizcausevic-dev/student-ai-disclosure-spec](https://github.com/mizcausevic-dev/student-ai-disclosure-spec)
+- **Detect via**: top-level `disclosure_version` field in the JSON document
+- **Buyer audience**: Academic Integrity · LMS · School administrators
+- **Category**: EdTech extension — Student AI Disclosure (student-side)
+- **License**: AGPL-3.0 for spec text; Apache-2.0 for the landing site
+- **Deployment**: GitHub Actions FTP CI/CD on push to main
+
+## Pages
+
+- [/](https://student.kineticgain.com/): Student AI Disclosure — Student-side disclosure attached to submitted work.
+
+## Part of the Kinetic Gain Protocol Suite
+
+A family of **10 open JSON specifications** for the answer-engine and agent era — five core (AEO, Prompt Provenance, Agent Cards, AI Evidence Format, MCP Tool Cards), a three-spec EdTech trio (Tutor Cards / Student AI Disclosure / Classroom AI AUP), a HealthTech extension (Clinical AI Disclosure), and a cross-cutting Incident Card. **Two regulated verticals covered.**
+
+- **Front door**: [suite.kineticgain.com](https://suite.kineticgain.com/)
+- **Quickstart hub**: [docs.kineticgain.com](https://docs.kineticgain.com/)
+- **Unified MCP server** (34 tools, 8 specs, v0.4.0): [github.com/mizcausevic-dev/mcp-kinetic-gain](https://github.com/mizcausevic-dev/mcp-kinetic-gain)
+- **Unified visualizer** (8 renderers): [github.com/mizcausevic-dev/kinetic-gain-visualizer](https://github.com/mizcausevic-dev/kinetic-gain-visualizer)
+- **Meta-repo**: [github.com/mizcausevic-dev/kinetic-gain-protocol-suite](https://github.com/mizcausevic-dev/kinetic-gain-protocol-suite)
+
+## Author
+
+- **Miz Causevic** · Director / Principal Platform Engineering · Boston, MA
+- [github.com/mizcausevic-dev](https://github.com/mizcausevic-dev) · [linkedin.com/in/mirzacausevic](https://www.linkedin.com/in/mirzacausevic/) · [kineticgain.com](https://kineticgain.com/) · [medium.com/@mizcausevic](https://medium.com/@mizcausevic/)
+- ~30 years across IBM, CyberArk, Alteryx, Digital.ai, Gryphon.ai
