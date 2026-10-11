@@ -61,23 +61,23 @@
           </article>
           <article class="card">
             <h3>Prompt evidence — three modes</h3>
-            <p><code>full</code> (literal text preserved), <code>hashed</code> (canonical SHA-256 only — privacy-preserving), <code>omitted</code> (consciously not retained). Schema gates which fields can appear per mode.</p>
+            <p><code>full</code> (literal text preserved), <code>hashed</code> (SHA-256 instead of literal text), <code>omitted</code> (not retained). Hashes reduce text retention but can still reveal common prompts. Schema gates which fields can appear per mode.</p>
           </article>
           <article class="card">
             <h3>Artifact binding</h3>
-            <p><code>artifact_hash</code> = canonical SHA-256 over the submission bytes. Binds the disclosure to a specific file. Post-submission edits become detectable in seconds.</p>
+            <p><code>artifact_hash</code> records SHA-256 over the submission bytes. A reviewer can recompute and compare the hash to detect changed bytes.</p>
           </article>
           <article class="card">
             <h3>AUP reference</h3>
-            <p><code>aup_uri</code> points at the operative <a href="https://aup.kineticgain.com" target="_blank">Classroom AI AUP</a> at submission time. A grader's compliance check is a single JSON join.</p>
+            <p><code>aup_uri</code> points at a declared <a href="https://aup.kineticgain.com" target="_blank" rel="noreferrer">Classroom AI AUP</a>. A reviewer must confirm the applicable policy version and facts before deciding whether the use was allowed.</p>
           </article>
           <article class="card">
-            <h3>Signature + acknowledgment</h3>
-            <p><code>signed_by_student: true</code> + <code>student_signature_at</code> required. Optional <code>teacher_acknowledged</code> block (by + at + note) captures grader review.</p>
+            <h3>Student declaration + acknowledgment</h3>
+            <p><code>signed_by_student: true</code> + <code>student_signature_at</code> are required self-reported fields, not a cryptographic signature. An optional <code>teacher_acknowledged</code> block records grader review.</p>
           </article>
           <article class="card">
             <h3>Closes the EdTech trio</h3>
-            <p>Joins with <a href="https://tutor.kineticgain.com" target="_blank">Tutor Cards</a> (vendor-side) and <a href="https://aup.kineticgain.com" target="_blank">Classroom AI AUP</a> (district-side). Three documents, two joins, one allow/deny answer per submission.</p>
+            <p>Links to <a href="https://tutor.kineticgain.com" target="_blank" rel="noreferrer">Tutor Cards</a> (vendor-side) and <a href="https://aup.kineticgain.com" target="_blank" rel="noreferrer">Classroom AI AUP</a> (district-side). The three documents give reviewers context; their declared fields alone are not an authorization decision.</p>
           </article>
         </div>
       </div>
@@ -102,7 +102,8 @@
 
     <section id="example" class="block">
       <div class="block-inner">
-        <h2>A canonical example</h2>
+        <h2>An illustrative example</h2>
+        <p class="prose">This fictional disclosure shows the format; it is not a real student record, school policy decision, signed statement, or verification of the named AI provider.</p>
         <pre class="code-block"><code>{
   "disclosure_version": "0.1",
   "disclosure_id": "d-2026-05-12-b4f9c1e8",
